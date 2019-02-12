@@ -38,7 +38,7 @@ int main() {
 }
 
 #endif
-
+#if 0
 int main() {
 
 	int vec[3] = { 1,2,3 };
@@ -52,3 +52,5 @@ int main() {
 	system("pause");
 	return 0;
 }
+
+#endif
