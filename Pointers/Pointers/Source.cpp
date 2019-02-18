@@ -121,7 +121,3 @@ int main() {
 	return 0;
 }
 #endif
-=======
-
-#endif
->>>>>>> f2ae3d5c95fc47d9ec30f9f8ef292b909f18c782
