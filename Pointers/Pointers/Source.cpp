@@ -121,3 +121,61 @@ int main() {
 	return 0;
 }
 #endif
+
+#if 0
+int main()
+{
+	int* nums = (int*)malloc(4 * sizeof(int));
+	int* more_nums = (int*)calloc(4, sizeof(int));
+	for (int i = 0; i < 4; ++i) {
+
+		std::cout << *(nums + i) << std::endl;
+		nums[i] = 0;
+		
+	}
+		
+	free(nums);
+	free(more_nums);
+	nums = more_nums = nullptr;
+
+	
+	system("pause");
+	return 0;
+}
+#endif
+
+#if 0
+int main() {
+
+	int *nums = (int*)malloc(4 * sizeof(int));
+	int array[4] = { 1,2,3,4 };
+
+	for (int i = 0; i < 4; i++) {
+
+		std::cout << *(array + i) << std::endl;
+	}
+
+	free(nums);
+
+	system("pause");
+	return 0;
+}
+#endif
+
+#if 0
+int main() {
+
+	int *nums2 = (int*)calloc(4, sizeof(int));
+	int array2[4] = { 0,2,0,0 }; //nums2[1] = 2;
+
+	for (int i = 0; i < 4; i++) {
+
+		std::cout << *(array2 + i) << std::endl; //*(nums + i);
+	}
+
+	free(nums2);
+
+	system("pause");
+	return 0;
+}
+#endif
