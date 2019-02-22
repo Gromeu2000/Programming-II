@@ -101,7 +101,6 @@ int main() {
 	system("pause");
 	return 0;
 }
-<<<<<<< HEAD
 #endif
 #if 0
 void charFunc(const char *ptr, int size) {
