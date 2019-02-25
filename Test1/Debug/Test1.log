@@ -1,4 +1,0 @@
-﻿  main.cpp
-c:\users\gerardrv\downloads\test1\main.cpp(89): warning C4474: 'printf' : too many arguments passed for format string
-  c:\users\gerardrv\downloads\test1\main.cpp(89): note: placeholders and their parameters expect 3 variadic arguments, but 4 were provided
-  Test1.vcxproj -> C:\Users\gerardrv\Downloads\Test1\Debug\Test1.exe
