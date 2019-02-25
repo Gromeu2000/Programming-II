@@ -179,3 +179,27 @@ int main() {
 	return 0;
 }
 #endif
+
+#if 0
+struct Player {
+
+	int health;
+	float x, y;
+};
+
+void printPlayer(Player *p) {
+
+	std::cout << p->health << std::endl;
+	std::cout << (*p).x << std::endl;
+	std::cout << (*p).y << std::endl;
+}
+
+int main() {
+
+	Player p = { 100, 5.0, 5.0 };
+	printPlayer(&p);
+
+	system("pause");
+	return 0;
+}
+#endif
