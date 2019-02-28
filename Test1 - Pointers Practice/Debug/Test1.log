@@ -1,4 +1,4 @@
 ﻿  main.cpp
-c:\users\gerardrv\downloads\test1\main.cpp(89): warning C4474: 'printf' : too many arguments passed for format string
-  c:\users\gerardrv\downloads\test1\main.cpp(89): note: placeholders and their parameters expect 3 variadic arguments, but 4 were provided
-  Test1.vcxproj -> C:\Users\gerardrv\Downloads\Test1\Debug\Test1.exe
+d:\grome\documents\github\programming-ii\test1 - pointers practice\main.cpp(89): warning C4474: "printf": se pasaron demasiados argumentos para la cadena de formato
+  d:\grome\documents\github\programming-ii\test1 - pointers practice\main.cpp(89): note: los marcadores de posición y sus parámetros esperan 3 argumentos variádicos, pero se proporcionaron 4
+  Test1.vcxproj -> D:\grome\Documents\GitHub\Programming-II\Test1 - Pointers Practice\Debug\Test1.exe

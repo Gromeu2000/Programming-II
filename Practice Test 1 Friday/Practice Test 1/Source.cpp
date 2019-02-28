@@ -8,6 +8,7 @@ int main() {
 	/*ExerciseII();*/
 	/*ExerciseIII();*/
 	ExerciseIV();
+	ExerciseV();
 
 	system("pause");
 	return 0;
