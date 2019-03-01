@@ -18,20 +18,13 @@ void updateLifeIndicatorPlayer1(ushort* lifeIndicatorP1, ushort damage)
 
 		for (int i = 0; i < 10; i++) {
 
-			if (*(lifeIndicatorP1 + i) == 1 ) { //(damage != 0 && *lideIndicatorP1 == 1)
+			if (*(lifeIndicatorP1 + i) == 1 && damage != 0) {
 
-				*(lifeIndicatorP1 + i)= 0;
+				*(lifeIndicatorP1 + i) = 0;
 				damage--;
-
-				if (damage == 0) {
-
-					return;
-				}
 			}
 		}
 	}
-	
-	
 }
 
 
@@ -43,19 +36,13 @@ void updateLifeIndicatorPlayer2(ushort* lifeIndicatorP2, ushort damage)
 
 		for (int i = 9; i >= 0; i--) {
 
-			if (*(lifeIndicatorP2 + i) == 1) {
+			if ( *(lifeIndicatorP2 + i) == 1 && damage != 0 ) {
 
 				*(lifeIndicatorP2 + i) = 0;
 				damage--;
-
-				if (damage == 0) {
-
-					return;
-				}
-
 			}
 		}
 	}
-}
 
+}
 #endif
