@@ -66,40 +66,20 @@ float distance(float ax, float ay, float bx, float by)
 void damageEnemiesWithGrenade(Grenade *grenade, Enemy *enemies, int numEnemies)
 {
 	// TODO
-
 	for (int i = 0; i < numEnemies; i++) {
 
-		Enemy *enemy = enemies + i;
-		float ex = enemy->x;
-		float ey = enemy->y;
-		float gx = grenade->x;
-		float gy = grenade->y;
-		if (distance(ex, ey, gx, gy) < grenade->radius) {
+		Enemy *ptrenemy = enemies + i;
 
-			enemy->life -= grenade->damage;
-			if (enemy->life < 0) {
+		if (distance(grenade->x, grenade->y, ptrenemy->x, ptrenemy->y) <= grenade->radius) {
 
-				enemy->life = 0;
+			ptrenemy ->life -= grenade->damage;
+
+			if (ptrenemy->life < 0) {
+
+				ptrenemy->life = 0;
 			}
 		}
-
-	}
-		/*distance(enemies->x, enemies->y, grenade->x, grenade->y);
-
-		for (int i = 0; i <= numEnemies; i++) {
-
-			if ((enemies + i)->life == 1) {
-
-				(enemies++)->life = 0;
-				grenade->damage--;
-
-			}
-
-			if (grenade->damage == 0) {
-
-				return;
-			}
-		}*/
+	}	
 }
 
 /**
@@ -114,17 +94,17 @@ Enemy *findTargetEnemy(SeekerMissile *missile, Enemy *enemies, int numEnemies)
 	Enemy *foundEnemy = nullptr;
 	
 	// TODO
+
 	for (int i = 0; i < numEnemies; i++) {
 
-		Enemy*enemy = enemies + i;
+		Enemy *ptrenemies = enemies + i;
 
-		if (strcmp(enemy->name, missile->targetName) == 0) {
+		if (strcmp(missile->targetName, ptrenemies->name) == 0) {
 
-			foundEnemy = enemy;
-			break;
+			foundEnemy = ptrenemies;
 		}
-
 	}
+	
 	
 	return foundEnemy;
 }
@@ -137,18 +117,13 @@ Enemy *findTargetEnemy(SeekerMissile *missile, Enemy *enemies, int numEnemies)
 void damageTargetEnemy(SeekerMissile *missile, Enemy *targetEnemy)
 {
 	// TODO
-
 	targetEnemy->life -= missile->damage;
+
 	if (targetEnemy->life < 0) {
 
 		targetEnemy->life = 0;
 	}
 
-	/*if (missile->damage != 0 && targetEnemy->life == 1) {
-
-		targetEnemy->life = 0;
-		missile->damage--;
-	}*/
 }
 
 #endif
