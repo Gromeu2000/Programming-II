@@ -3,7 +3,7 @@
 
 int main() {
 
-	Ex1();
+	/*Ex1()*/;
 	Ex2();
 
 	system("pause");
