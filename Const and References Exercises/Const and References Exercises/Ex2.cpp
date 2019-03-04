@@ -2,13 +2,13 @@
 
 struct Pirate {
 
-	unsigned char name;
+	unsigned char name[30];
 	int life;
 };
 
 struct Weapon {
 
-	unsigned char name;
+	unsigned char name[30];
 	int damage;
 };
 
@@ -34,11 +34,14 @@ void attack(Pirate *leChuck, const Weapon &sword) {
 
 void Ex2() {
 	 
-	Pirate leChuck;
-	Weapon sword;
-
-	attack(&leChuck, sword);
+	Pirate leChuck{ "LeChuck", 100 };
+	Weapon Sword{ "Imperial_Sword", 10 };
+	
 
 	printPirateInfo(leChuck);
-	printWeaponInfo(sword);
+
+
+	attack(&leChuck, Sword);
+
+	printPirateInfo(leChuck);
 }
