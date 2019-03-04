@@ -4,7 +4,7 @@
 int main() {
 
 	/*Ex1()*/;
-	Ex2();
+	Ex3();
 
 	system("pause");
 	return 0;
