@@ -1,2 +1,4 @@
 ﻿  Source.cpp
-  Classes Exercises.vcxproj -> C:\Users\gerardrv\Documents\GitHub\Programming-II\Classes Exercises\Debug\Classes Exercises.exe
+d:\grome\documents\github\programming-ii\classes exercises\classes exercises\source.cpp(166): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+d:\grome\documents\github\programming-ii\classes exercises\classes exercises\source.cpp(166): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+  Classes Exercises.vcxproj -> D:\grome\Documents\GitHub\Programming-II\Classes Exercises\Debug\Classes Exercises.exe
