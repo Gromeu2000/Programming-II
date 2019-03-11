@@ -4,19 +4,29 @@
 #if 0
 class Pixel {
 
+private:
+	short int red;
+	short int green;
+	short int blue;
+
 public:
-	int red;
-	int green;
-	int blue;
+	Pixel() : red(0), green(0), blue(0) {}
 
-	Pixel(){ }
+	Pixel(short int red, short int green, short int blue): red(red), green(green), blue(blue) {}
 
-	Pixel(int red, int green, int blue): red(0), green(0), blue(0) {}
+	Pixel mix(Pixel pixel1) {
 
-	int mix(Pixel pixel1) {
+		Pixel newP;
+		newP.red = (red + pixel1.red) / 2;
+		newP.green = (green + pixel1.green) / 2;
+		newP.blue = (blue + pixel1.blue) / 2;
 
-		
+		return newP;
 	}
+
+	short int Red() const { return red; }
+	short int Green() const { return green; }
+	short int Blue() const { return blue; }
 };
 
 int main() {
@@ -26,8 +36,10 @@ int main() {
 	Pixel red(255, 0, 0);
 	Pixel mixed = red.mix(blue);
 
-	std::cout << black.red() << " " << black.green() << " " << black.blue << std::endl;
-	std::cout << mixed.red() << " " << mixed.green() << " " << mixed.blue << std::endl;
+	std::cout << black.Red() << " " << black.Green() << " " << black.Blue() << std::endl;
+	std::cout << mixed.Red() << " " << mixed.Green() << " " << mixed.Blue() << std::endl;
+	system("pause");
+	return 0;
 }
 #endif
 
@@ -35,32 +47,19 @@ int main() {
 class Clock {
 
 private:
-	unsigned int hours;
-	unsigned int minutes;
-	unsigned int seconds;
+	short int hours;
+	short int minutes;
+	short int seconds;
 
 public:
 
-	Clock(){ }
+	Clock() : hours(0), minutes(0), seconds(0) { }
 
-	Clock(int hours, int minutes, int seconds) : hours(0), minutes(0), seconds(0) { }
+	Clock(int hours, int minutes, int seconds) : hours(hours), minutes(minutes), seconds(seconds) { }
 
-	void getHours(Clock clock1, Clock clock2) {
-
-		std::cout << "Please insert an hour for clock 1 (0 - 23): " << std::endl;
-		std::cin >> clock1.hours;
-		std::cout << "Please insert a minute for clock 1 (0 - 59): " << std::endl;
-		std::cin >> clock1.minutes;
-		std::cout << "Please insert a second for clock 1 (0 - 59): " << std::endl;
-		std::cin >> clock1.seconds;
-
-		std::cout << "Please insert an hour for clock 2 (0 - 23): " << std::endl;
-		std::cin >> clock2.hours;
-		std::cout << "Please insert a minute for clock 2 (0 - 59): " << std::endl;
-		std::cin >> clock2.minutes;
-		std::cout << "Please insert a second for clock 2 (0 - 59): " << std::endl;
-		std::cin >> clock2.seconds;
-	}
+	short int geth() const { return hours; }
+	short int getm() const { return minutes; }
+	short int gets() const { return seconds; }
 
 	void equalClocks(Clock clock1, Clock clock2) {
 
@@ -118,10 +117,9 @@ public:
 		}
 	}
 
-	void setTime(unsigned char *h, unsigned char *min, unsigned char *sec) {
-
-
-	}
+	void seth(short int Hours) { hours = Hours; }
+	void setm(short int Minutes) { minutes = Minutes; }
+	void sets(short int Seconds) { seconds = Seconds; }
 
 	void printTime(Clock clock1, Clock clock2) {
 
@@ -132,11 +130,10 @@ public:
 
 int main() {
 
-	Clock clock(0, 0, 0);
+	Clock clock;
 	Clock clock1(12, 34, 32);
-	Clock clock2(12,34, 12);
+	Clock clock2(15,34, 12);
 
-	clock.getHours(clock1, clock2);
 	clock.equalClocks(clock1, clock2);
 	clock.fastClock(clock1, clock2);
 	clock.printTime(clock1, clock2);
@@ -191,6 +188,7 @@ int main() {
 	return 0;
 }
 #endif
+
 
 
 #if 0
