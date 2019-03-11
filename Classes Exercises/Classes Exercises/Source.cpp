@@ -63,7 +63,7 @@ public:
 
 	void equalClocks(Clock clock1, Clock clock2) {
 
-		if (clock1.hours == clock2.hours && clock1.hours == clock2.minutes && clock1.seconds == clock2.seconds) {
+		if (clock1.hours == clock2.hours && clock1.minutes == clock2.minutes && clock1.seconds == clock2.seconds) {
 
 			std::cout << "Clocks are equal" << std::endl;
 		}
@@ -131,8 +131,8 @@ public:
 int main() {
 
 	Clock clock;
-	Clock clock1(12, 34, 32);
-	Clock clock2(15,34, 12);
+	Clock clock1(12, 51, 56);
+	Clock clock2(12, 11, 56);
 
 	clock.equalClocks(clock1, clock2);
 	clock.fastClock(clock1, clock2);
@@ -143,30 +143,30 @@ int main() {
 }
 #endif
 
-#if 0
+
 class Vec3 {
 
 public:
-	int x;
-	int y;
-	int z;
+	float x;
+	float y;
+	float z;
 
-	Vec3() { }
-	Vec3(int x, int y, int z): x(0), y(0), z(0) { }
+	Vec3(): x(0), y(0), z(0) { }
+	Vec3(float X, float Y, float Z): x(X), y(Y), z(Z) { }
 	Vec3(const Vec3 &v2) { x = v2.x; y = v2.y; z = v2.z; }
 
-	int length(Vec3 vec) {
+	float length(Vec3 vec) {
 
 		vec.x *= vec.x;
 		vec.y *= vec.y;
 		vec.z *= vec.z;
-		int vecS = vec.x + vec.y + vec.z;
-		int vecF = sqrtf(vecS);
+		float vecS = vec.x + vec.y + vec.z;
+		float vecF = sqrtf(vecS);
 
 		return vecF;
 	}
 
-	int inverse(Vec3 vec) {
+	Vec3 inverse(Vec3 vec) {
 
 		
 	}
@@ -181,13 +181,19 @@ int dot(Vec3 vec1, Vec3 vec2) {
 
 int main() {
 
-	Vec3 vector = { 2, 2, 2 };
+	Vec3 vector;
+	Vec3 vector1 = { 2, 2, 2 };
 	Vec3 vector2 = { 3, 3, 3 };
+
+	std::cout << "Vector1 length is " << vector.length(vector1) << std::endl;
+	std::cout << "Vector2 length is " << vector.length(vector2) << std::endl;
+
+	std::cout << "Vectors' dot product is " << dot(vector1, vector2) << std::endl;
 
 	system("pause");
 	return 0;
 }
-#endif
+
 
 
 
