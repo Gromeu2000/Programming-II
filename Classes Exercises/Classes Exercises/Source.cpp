@@ -155,24 +155,26 @@ public:
 	Vec3(float X, float Y, float Z): x(X), y(Y), z(Z) { }
 	Vec3(const Vec3 &v2) { x = v2.x; y = v2.y; z = v2.z; }
 
-	float length(Vec3 vec) {
+	float length() const {
 
-		vec.x *= vec.x;
-		vec.y *= vec.y;
-		vec.z *= vec.z;
-		float vecS = vec.x + vec.y + vec.z;
+		float vecS = x*x + y*y + z*z;
 		float vecF = sqrtf(vecS);
 
 		return vecF;
 	}
 
-	Vec3 inverse(Vec3 vec) {
-
-		
+	Vec3 inverse() {
+		Vec3 inv(-x, -y, -z);
+		return inv;
 	}
 };
 
-int dot(Vec3 vec1, Vec3 vec2) {
+std::ostream& operator << (std::ostream &o, const Vec3 &v) {
+
+	return o << v.x << " " << v.y << " " << v.z;
+}
+
+int dot(const Vec3 &vec1, const Vec3 &vec2) {
 
 	int vecdot = vec1.x * vec2.x + vec1.y * vec2.y + vec1.z * vec2.z;
 
@@ -181,21 +183,20 @@ int dot(Vec3 vec1, Vec3 vec2) {
 
 int main() {
 
-	Vec3 vector;
 	Vec3 vector1 = { 2, 2, 2 };
-	Vec3 vector2 = { 3, 3, 3 };
+	Vec3 vector2 = { 1, 3, 3 };
 
-	std::cout << "Vector1 length is " << vector.length(vector1) << std::endl;
-	std::cout << "Vector2 length is " << vector.length(vector2) << std::endl;
+	std::cout << "Vector1 length is " << vector1.length() << std::endl;
+	std::cout << "Vector2 length is " << vector2.length() << std::endl;
+
+	Vec3 vector3 = vector2.inverse();
+	std::cout << vector3 << std::endl;
 
 	std::cout << "Vectors' dot product is " << dot(vector1, vector2) << std::endl;
 
 	system("pause");
 	return 0;
 }
-
-
-
 
 #if 0
 class Module {
