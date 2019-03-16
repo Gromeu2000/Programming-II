@@ -1,3 +1,6 @@
 ﻿  Source.cpp
-c:\users\gerardrv\documents\github\programming-ii\classes exercises\classes exercises\source.cpp(177): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-  Classes Exercises.vcxproj -> C:\Users\gerardrv\Documents\GitHub\Programming-II\Classes Exercises\Debug\Classes Exercises.exe
+d:\grome\documents\github\programming-ii\classes exercises\classes exercises\source.cpp(175): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+d:\grome\documents\github\programming-ii\classes exercises\classes exercises\source.cpp(176): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+d:\grome\documents\github\programming-ii\classes exercises\classes exercises\source.cpp(177): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+d:\grome\documents\github\programming-ii\classes exercises\classes exercises\source.cpp(183): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+  Classes Exercises.vcxproj -> D:\grome\Documents\GitHub\Programming-II\Classes Exercises\Debug\Classes Exercises.exe

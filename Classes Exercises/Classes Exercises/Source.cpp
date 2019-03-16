@@ -143,7 +143,7 @@ int main() {
 }
 #endif
 
-
+#if 0
 class Vec3 {
 
 public:
@@ -168,7 +168,11 @@ public:
 
 	Vec3 inverse(Vec3 vec) {
 
-		
+		Vec3 invec;
+		invec.x = vec.z;
+		invec.z = vec.x;
+
+		return invec;
 	}
 };
 
@@ -182,8 +186,8 @@ int dot(Vec3 vec1, Vec3 vec2) {
 int main() {
 
 	Vec3 vector;
-	Vec3 vector1 = { 2, 2, 2 };
-	Vec3 vector2 = { 3, 3, 3 };
+	Vec3 vector1 = { 9, 8, 2 };
+	Vec3 vector2 = { 1, 3, 6 };
 
 	std::cout << "Vector1 length is " << vector.length(vector1) << std::endl;
 	std::cout << "Vector2 length is " << vector.length(vector2) << std::endl;
@@ -193,9 +197,7 @@ int main() {
 	system("pause");
 	return 0;
 }
-
-
-
+#endif
 
 #if 0
 class Module {
