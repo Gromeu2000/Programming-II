@@ -6,7 +6,7 @@ typedef const char cchar;
 class Player {
 
 private:
-	cchar *name;
+	char name[19];
 	unsigned short life;
 	bool invincible = false;
 	bool* capabilities = new bool[3]();
@@ -14,16 +14,21 @@ private:
 
 public:
 	
-	Player() : name("Pepe"), life(3), invincible(false), capabilities(false), weapon(false) {}
+	Player(cchar *name2) : life(3), invincible(false) {
+	
+		strcpy(name, name2);
+		capabilities[1] = true;
+	}
 
-	~Player() {}
+	~Player() {
+	
+		delete[] capabilities;
+		delete[] weapon;
+	}
 
 	unsigned char getName() const {
-
-		std::cout << name << std::endl;
 		
 		return *name;
-		
 	}
 
 	void PrintNumLifes() const {
@@ -44,26 +49,24 @@ public:
 
 	void PrintCapibilities() const {
 
-		if (capabilities) {
-
 			for (int i = 0; i < 3; i++) {
 
-				std::cout << capabilities[i] << std::endl;
+				if (capabilities[i]) {
+
+					std::cout << capabilities[i] << std::endl;
+				}
 			}
-			
-		}
 	}
 
 	void PrintWeapon() const {
 
-		if (weapon) {
-
 			for (int i = 0; i < 3; i++) {
 
-				std::cout << weapon[i] << std::endl;
-			}
+				if (weapon) {
 
-		}
+					std::cout << weapon[i] << std::endl;
+				}
+			}
 	}
 
 	void EqualOperator() const {
@@ -85,16 +88,14 @@ public:
 class Item{
 
 private:
-
-	cchar *one_up = "One_Up";
-	cchar *mini_mario = "Mini_Mario";
-	cchar *super_mario = "Super_Mario";
-	cchar *fire_flower = "Fire-Flower";
-	cchar *ice_flower = "Ice_Flower";
-	cchar *golden_flower = "Golden_Flower";
+	char item_name[25];
 
 public:
-	Item(cchar *ou, cchar *mm, cchar *sp, cchar *ff, cchar *iF, cchar *gf) : one_up(ou), mini_mario(mm), super_mario(sp), fire_flower(ff), ice_flower(iF), golden_flower(gf){}
+	Item(cchar *In) {
+	
+		strcpy(item_name, In);
+	}
+
 	~Item() {}
 };
 

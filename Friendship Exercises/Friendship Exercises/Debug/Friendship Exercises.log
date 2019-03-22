@@ -1,2 +1,4 @@
 ﻿  Source.cpp
-  Friendship Exercises.vcxproj -> D:\grome\Documents\GitHub\Programming-II\Friendship Exercises\Debug\Friendship Exercises.exe
+c:\users\gerardrv\documents\github\programming-ii\friendship exercises\friendship exercises\source.cpp(19): error C2065: 'sy6': undeclared identifier
+c:\users\gerardrv\documents\github\programming-ii\friendship exercises\friendship exercises\source.cpp(20): error C2146: syntax error: missing ';' before identifier 'capabilities'
+c:\users\gerardrv\documents\github\programming-ii\friendship exercises\friendship exercises\source.cpp(95): error C2059: syntax error: '{'
