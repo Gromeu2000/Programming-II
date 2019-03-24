@@ -1,4 +1,10 @@
 ﻿  Source.cpp
-c:\users\gerardrv\documents\github\programming-ii\friendship exercises\friendship exercises\source.cpp(19): error C2065: 'sy6': undeclared identifier
-c:\users\gerardrv\documents\github\programming-ii\friendship exercises\friendship exercises\source.cpp(20): error C2146: syntax error: missing ';' before identifier 'capabilities'
-c:\users\gerardrv\documents\github\programming-ii\friendship exercises\friendship exercises\source.cpp(95): error C2059: syntax error: '{'
+d:\grome\documents\github\programming-ii\friendship exercises\friendship exercises\source.cpp(87): error C2061: error de sintaxis: identificador 'Item'
+d:\grome\documents\github\programming-ii\friendship exercises\friendship exercises\source.cpp(96): error C2061: error de sintaxis: identificador 'Item'
+d:\grome\documents\github\programming-ii\friendship exercises\friendship exercises\source.cpp(123): error C2061: error de sintaxis: identificador 'Item'
+d:\grome\documents\github\programming-ii\friendship exercises\friendship exercises\source.cpp(89): error C2065: 'item': identificador no declarado
+d:\grome\documents\github\programming-ii\friendship exercises\friendship exercises\source.cpp(100): error C2065: 'item': identificador no declarado
+d:\grome\documents\github\programming-ii\friendship exercises\friendship exercises\source.cpp(107): error C2065: 'item': identificador no declarado
+d:\grome\documents\github\programming-ii\friendship exercises\friendship exercises\source.cpp(127): error C2065: 'item': identificador no declarado
+d:\grome\documents\github\programming-ii\friendship exercises\friendship exercises\source.cpp(134): error C2065: 'item': identificador no declarado
+d:\grome\documents\github\programming-ii\friendship exercises\friendship exercises\source.cpp(141): error C2065: 'item': identificador no declarado

@@ -16,7 +16,7 @@ public:
 	
 	Player(cchar *name2) : life(3), invincible(false) {
 	
-		strcpy(name, name2);
+		strcpy_s(name, name2);
 		capabilities[1] = true;
 	}
 
@@ -62,7 +62,7 @@ public:
 
 			for (int i = 0; i < 3; i++) {
 
-				if (weapon) {
+				if (weapon[i]) {
 
 					std::cout << weapon[i] << std::endl;
 				}
@@ -83,6 +83,71 @@ public:
 			std::cout << "Available name" << std::endl;
 		}
 	}
+
+	void NumberLifes(Item &item) {
+
+		if (strcmp(item.item_name, "One_Up") == 0) {
+
+			life++;
+		}
+
+	}
+
+	void Capabalities(Item &item) {
+
+		for (int i = 0; i < 3; i++) {
+
+			if (strcmp(item.item_name, "Mini_Mario") == 0) {
+
+				capabilities[0] = true;
+				capabilities[1] = false;
+				capabilities[2] = false;
+			}
+
+			if (strcmp(item.item_name, "Super_Mario") == 0) {
+
+				capabilities[0] = false;
+				capabilities[1] = false;
+				capabilities[2] = true;
+			}
+
+			else {
+
+				capabilities[0] = false;
+				capabilities[1] = true;
+				capabilities[2] = false;
+			}
+		}
+	}
+
+	void Weapon(Item &item) {
+
+		for (int i = 0; i < 3; i++) {
+
+			if (strcmp(item.item_name, "Fire_Flower") == 0) {
+
+				weapon[0] = true;
+				weapon[1] = false;
+				weapon[2] = false;
+			}
+
+			if (strcmp(item.item_name, "Ice_Flower") == 0) {
+
+				weapon[0] = false;
+				weapon[1] = true;
+				weapon[2] = false;
+			}
+
+			if (strcmp(item.item_name, "Golden_Flower") == 0) {
+
+				weapon[0] = false;
+				weapon[1] = false;
+				weapon[2] = true;
+			}
+		}
+	}
+
+	friend void starTouched(Player &player);
 };
 
 class Item{
@@ -93,11 +158,20 @@ private:
 public:
 	Item(cchar *In) {
 	
-		strcpy(item_name, In);
+		strcpy_s(item_name, In);
 	}
+	
+	friend class Player;
 
 	~Item() {}
+	
+	
 };
+
+void starTouched(Player &player) {
+
+	player.invincible = true;
+}
 
 int main() {
 

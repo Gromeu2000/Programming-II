@@ -29,5 +29,11 @@
     <ClInclude Include="ModuleInput.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ModuleLogic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleRender.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

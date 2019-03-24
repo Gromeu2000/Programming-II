@@ -1,5 +1,5 @@
 #pragma once
-#include <string.h>
+#include <string.h> 
 
 class Module {
 
@@ -8,7 +8,7 @@ public:
 
 	Module(const char *nameP) {
 
-		strcpy(name, nameP);
+		strcpy_s(name, nameP);
 	}
 
 	virtual void start() {};
