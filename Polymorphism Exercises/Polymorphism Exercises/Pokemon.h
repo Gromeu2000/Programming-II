@@ -9,14 +9,13 @@ protected:
 	char type[15];
 
 public:
-	Pokemon(const char* nameP, const char* typeP){
+	Pokemon(const char* nameP){
 	
 		strcpy_s(name, nameP);
-		typeP = "noType";
-		strcpy_s(type, typeP);
-
+		strcpy_s(type, "noType");
 	}
 
-	virtual char getName() const { return *name; }
-	virtual char getType() const { return *type; }
+	virtual const char *getName() const { return name; }
+	virtual const char *getType() const { return type; }
+	virtual int damageAttack(Pokemon *pokemon) = 0;
 };

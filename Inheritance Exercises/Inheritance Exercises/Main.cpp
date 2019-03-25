@@ -9,10 +9,12 @@
 int main() {
 
 	Warehouse w ("East Warehouse", 10, 20, 30);
-	House h ("Agrpa's house", 2, 5, 10);
+	House h ("Agripa's house", 2, 5, 10);
 	Temple t("Mercury's Temple", "Mercury", 3);
 
 	std::cout << "Warehouse name: " << w.getName() << std::endl << std::endl;
+	std::cout << "House name: " << h.getName() << std::endl << std::endl;
+	std::cout << "Temple name: " << t.getName() << std::endl << std::endl;
 
 	std::cout << "---- East Warehouse ---" << std::endl;
 	w.printResources();

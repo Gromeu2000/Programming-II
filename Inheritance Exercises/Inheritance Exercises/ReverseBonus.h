@@ -1,17 +1,15 @@
 #pragma once
 #include <iostream>
 
-void reverse(int array[5]) {
+void reverse(int *vec) {
 
-	int *vec = array;
+	int *pointer2 = vec + 4;
 
-	int *pointer2 = array + 5 - 1;
+	while (vec < pointer2) {
 
-	while (array < pointer2) {
-
+		int var = *vec;
 		*vec = *pointer2;
-		*pointer2 = *vec;
-		*vec = *pointer2;
+		*pointer2 = var;
 
 		vec++;
 		pointer2--;

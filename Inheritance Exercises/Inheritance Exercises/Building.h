@@ -13,5 +13,8 @@ public:
 		strcpy_s(name, nameP);
 	}
 
-	char getName() const {return *name; }
+	const char *getName() const {
+		
+		return name; 
+	}
 };
