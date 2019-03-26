@@ -5,12 +5,12 @@
 class Pokemon {
 
 protected:
-	char name[35];
-	char type[15];
+	char name[25];
+	char type[25];
 
 public:
-	Pokemon(const char* nameP){
-	
+	Pokemon(const char* nameP) {
+
 		strcpy_s(name, nameP);
 		strcpy_s(type, "noType");
 	}

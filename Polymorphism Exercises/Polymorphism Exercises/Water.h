@@ -6,19 +6,27 @@
 #include "Grass.h"
 #include "Fire.h"
 
-class WaterPokemon : public Pokemon{
+class WaterPokemon :public Pokemon {
 
 public:
 	WaterPokemon(const char* nameP) : Pokemon(nameP) {
 
-		strcpy_s(type, "Water Type");
+		strcpy_s(type, "Water");
 	}
 
-	int damageAttack(Pokemon *Pokemon) override {
+	int damageAttack(Pokemon *pokemon) {
 
 		int damage = 10;
-		if (strcmp((*Pokemon).getType(), "Fire Type") == 0) { damage *= 2; }
-		if (strcmp((*Pokemon).getType(), "Grass Type") == 0) { damage *= 0.5; }
+
+		if (strcmp(pokemon->getType(), "Grass") == 0) {
+
+			damage *= 0.5;
+		}
+		if (strcmp(pokemon->getType(), "Fire") == 0) {
+
+			damage *= 2;
+		}
+
 		return damage;
 	}
 };

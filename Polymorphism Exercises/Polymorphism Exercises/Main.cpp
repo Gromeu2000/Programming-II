@@ -13,10 +13,12 @@ int main() {
 	Pokemon* charmander = new FirePokemon("Charmander");
 	Pokemon* squirtle = new WaterPokemon("Squirtle");
 
-	std::cout << "--- Damage Attacks---" << std::endl;
+	std::cout << "---Damage Attacks---" << std::endl;
 
 	std::cout << pikachu->getName() << " -> " << bulbasaur->getName() << " = " << pikachu->damageAttack(bulbasaur) << " units\n";
-
+	std::cout << bulbasaur->getName() << " -> " << squirtle->getName() << " = " << bulbasaur->damageAttack(squirtle) << " units\n";
+	std::cout << squirtle->getName() << " -> " << charmander->getName() << " = " << squirtle->damageAttack(charmander) << " units\n";
+	std::cout << charmander->getName() << " -> " << pikachu->getName() << " = " << charmander->damageAttack(pikachu) << " units\n";
 
 	delete pikachu;
 	delete bulbasaur;

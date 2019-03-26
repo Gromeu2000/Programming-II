@@ -1,6 +1,6 @@
 ﻿  Main.cpp
-c:\users\gerardrv\documents\github\programming-ii\polymorphism exercises\polymorphism exercises\water.h(21): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
-c:\users\gerardrv\documents\github\programming-ii\polymorphism exercises\polymorphism exercises\fire.h(20): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
-c:\users\gerardrv\documents\github\programming-ii\polymorphism exercises\polymorphism exercises\grass.h(21): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
-c:\users\gerardrv\documents\github\programming-ii\polymorphism exercises\polymorphism exercises\electric.h(21): warning C4244: '*=': conversion from 'double' to 'int', possible loss of data
-  Polymorphism Exercises.vcxproj -> C:\Users\gerardrv\Documents\GitHub\Programming-II\Polymorphism Exercises\Debug\Polymorphism Exercises.exe
+d:\grome\documents\github\programming-ii\polymorphism exercises\polymorphism exercises\water.h(23): warning C4244: '*=': conversión de 'double' a 'int'; posible pérdida de datos
+d:\grome\documents\github\programming-ii\polymorphism exercises\polymorphism exercises\fire.h(23): warning C4244: '*=': conversión de 'double' a 'int'; posible pérdida de datos
+d:\grome\documents\github\programming-ii\polymorphism exercises\polymorphism exercises\grass.h(23): warning C4244: '*=': conversión de 'double' a 'int'; posible pérdida de datos
+d:\grome\documents\github\programming-ii\polymorphism exercises\polymorphism exercises\electric.h(23): warning C4244: '*=': conversión de 'double' a 'int'; posible pérdida de datos
+  Polymorphism Exercises.vcxproj -> D:\grome\Documents\GitHub\Programming-II\Polymorphism Exercises\Debug\Polymorphism Exercises.exe
