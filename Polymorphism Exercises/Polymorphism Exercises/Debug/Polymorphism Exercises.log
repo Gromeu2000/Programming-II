@@ -1,0 +1,6 @@
+﻿  Main.cpp
+d:\grome\documents\github\programming-ii\polymorphism exercises\polymorphism exercises\water.h(23): warning C4244: '*=': conversión de 'double' a 'int'; posible pérdida de datos
+d:\grome\documents\github\programming-ii\polymorphism exercises\polymorphism exercises\fire.h(23): warning C4244: '*=': conversión de 'double' a 'int'; posible pérdida de datos
+d:\grome\documents\github\programming-ii\polymorphism exercises\polymorphism exercises\grass.h(23): warning C4244: '*=': conversión de 'double' a 'int'; posible pérdida de datos
+d:\grome\documents\github\programming-ii\polymorphism exercises\polymorphism exercises\electric.h(23): warning C4244: '*=': conversión de 'double' a 'int'; posible pérdida de datos
+  Polymorphism Exercises.vcxproj -> D:\grome\Documents\GitHub\Programming-II\Polymorphism Exercises\Debug\Polymorphism Exercises.exe

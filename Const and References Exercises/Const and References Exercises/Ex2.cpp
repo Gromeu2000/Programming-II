@@ -15,33 +15,31 @@ struct Weapon {
 void printPirateInfo(const Pirate &p) {
 
 	std::cout << "--- Pirate ---" << std::endl;
-	std::cout << "name = " << p.name << std::endl;
-	std::cout << "life = " << p.life << std::endl;
+	std::cout << "Name = " << p.name << std::endl;
+	std::cout << "Life = " << p.life << std::endl;
 }
 
 void printWeaponInfo(const Weapon &w) {
 
 	std::cout << "--- Weapon ---" << std::endl;
-	std::cout << "name = " << w.name << std::endl;
-	std::cout << "life = " << w.damage << std::endl;
-
+	std::cout << "Name = " << w.name << std::endl;
+	std::cout << "Life = " << w.damage << std::endl;
 }
 
-void attack(Pirate *leChuck, const Weapon &sword) {
+void attack(Pirate *Lechuk, Weapon &sword) {
 
-	leChuck->life -= sword.damage;
+	Lechuk->life -= sword.damage;
 }
 
-void Ex2() {
-	 
-	Pirate leChuck{ "LeChuck", 100 };
-	Weapon Sword{ "Imperial_Sword", 10 };
-	
+void Ex3() {
 
-	printPirateInfo(leChuck);
+	Pirate pirate = { "LeChuck", 100 };
+	Weapon sword = { "Aguja", 10 };
 
+	printPirateInfo(pirate);
+	printWeaponInfo(sword);
 
-	attack(&leChuck, Sword);
+	attack(&pirate, sword);
 
-	printPirateInfo(leChuck);
+	printPirateInfo(pirate);
 }
