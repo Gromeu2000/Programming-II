@@ -1,0 +1,19 @@
+﻿  main.cpp
+c:\users\gerardrv\downloads\test 2 q2 18-19\main.cpp(17): error C2259: 'Barbarian': cannot instantiate abstract class
+  c:\users\gerardrv\downloads\test 2 q2 18-19\main.cpp(17): note: due to following members:
+  c:\users\gerardrv\downloads\test 2 q2 18-19\main.cpp(17): note: 'void Character::applyDamage(int,int) const': is abstract
+  c:\users\gerardrv\downloads\test 2 q2 18-19\diablo2.h(39): note: see declaration of 'Character::applyDamage'
+c:\users\gerardrv\downloads\test 2 q2 18-19\main.cpp(18): error C2259: 'Paladin': cannot instantiate abstract class
+  c:\users\gerardrv\downloads\test 2 q2 18-19\main.cpp(18): note: due to following members:
+  c:\users\gerardrv\downloads\test 2 q2 18-19\main.cpp(18): note: 'void Character::applyDamage(int,int) const': is abstract
+  c:\users\gerardrv\downloads\test 2 q2 18-19\diablo2.h(39): note: see declaration of 'Character::applyDamage'
+c:\users\gerardrv\downloads\test 2 q2 18-19\main.cpp(19): error C2259: 'Wizard': cannot instantiate abstract class
+  c:\users\gerardrv\downloads\test 2 q2 18-19\main.cpp(19): note: due to following members:
+  c:\users\gerardrv\downloads\test 2 q2 18-19\main.cpp(19): note: 'void Character::applyDamage(int,int) const': is abstract
+  c:\users\gerardrv\downloads\test 2 q2 18-19\diablo2.h(39): note: see declaration of 'Character::applyDamage'
+c:\users\gerardrv\downloads\test 2 q2 18-19\main.cpp(21): error C2039: 'getName': is not a member of 'Character'
+  c:\users\gerardrv\downloads\test 2 q2 18-19\diablo2.h(10): note: see declaration of 'Character'
+c:\users\gerardrv\downloads\test 2 q2 18-19\main.cpp(22): error C2039: 'getName': is not a member of 'Character'
+  c:\users\gerardrv\downloads\test 2 q2 18-19\diablo2.h(10): note: see declaration of 'Character'
+c:\users\gerardrv\downloads\test 2 q2 18-19\main.cpp(23): error C2039: 'getName': is not a member of 'Character'
+  c:\users\gerardrv\downloads\test 2 q2 18-19\diablo2.h(10): note: see declaration of 'Character'
