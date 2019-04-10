@@ -1,0 +1,4 @@
+﻿  test1.cpp
+d:\grome\documents\github\programming-ii\test 2\test1.cpp(85): warning C4474: "printf": se pasaron demasiados argumentos para la cadena de formato
+  d:\grome\documents\github\programming-ii\test 2\test1.cpp(85): note: los marcadores de posición y sus parámetros esperan 3 argumentos variádicos, pero se proporcionaron 4
+  Test1.vcxproj -> D:\grome\Documents\GitHub\Programming-II\Test 2\Debug\Test1.exe

@@ -1,0 +1,23 @@
+﻿  Source.cpp
+d:\grome\documents\github\programming-ii\string exercises\string exercises\source.cpp(51): error C2365: 'String::size': nueva definición; la definición anterior era 'miembro de datos'
+  d:\grome\documents\github\programming-ii\string exercises\string exercises\source.cpp(10): note: vea la declaración de 'String::size'
+d:\grome\documents\github\programming-ii\string exercises\string exercises\source.cpp(53): error C2059: error de sintaxis: 'return'
+d:\grome\documents\github\programming-ii\string exercises\string exercises\source.cpp(53): error C2238: símbolos (token) inesperados delante de ';'
+d:\grome\documents\github\programming-ii\string exercises\string exercises\source.cpp(58): error C2628: 'String' seguido de 'void' no es válido (¿ha olvidado ';'?)
+d:\grome\documents\github\programming-ii\string exercises\string exercises\source.cpp(58): error C2801: 'operator =' debe ser un miembro no estático
+d:\grome\documents\github\programming-ii\string exercises\string exercises\source.cpp(60): error C2065: 'array': identificador no declarado
+d:\grome\documents\github\programming-ii\string exercises\string exercises\source.cpp(60): error C2541: 'delete': no se pueden eliminar objetos que no sean punteros
+d:\grome\documents\github\programming-ii\string exercises\string exercises\source.cpp(61): error C2065: 'size': identificador no declarado
+d:\grome\documents\github\programming-ii\string exercises\string exercises\source.cpp(62): error C2065: 'array': identificador no declarado
+d:\grome\documents\github\programming-ii\string exercises\string exercises\source.cpp(62): error C2065: 'size': identificador no declarado
+d:\grome\documents\github\programming-ii\string exercises\string exercises\source.cpp(62): error C3078: se debe especificar el tamaño de la matriz en nuevas expresiones
+d:\grome\documents\github\programming-ii\string exercises\string exercises\source.cpp(63): error C2065: 'array': identificador no declarado
+d:\grome\documents\github\programming-ii\string exercises\string exercises\source.cpp(22): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+d:\grome\documents\github\programming-ii\string exercises\string exercises\source.cpp(67): error C2270: 'c_str': modificadores no permitidos en funciones que no sean miembro
+d:\grome\documents\github\programming-ii\string exercises\string exercises\source.cpp(69): error C2065: 'array': identificador no declarado
+d:\grome\documents\github\programming-ii\string exercises\string exercises\source.cpp(71): error C2059: error de sintaxis: '}'
+d:\grome\documents\github\programming-ii\string exercises\string exercises\source.cpp(71): error C2143: error de sintaxis: falta ';' delante de '}'
+d:\grome\documents\github\programming-ii\string exercises\string exercises\source.cpp(79): error C2039: 'c_str': no es un miembro de 'String'
+  d:\grome\documents\github\programming-ii\string exercises\string exercises\source.cpp(5): note: vea la declaración de 'String'
+d:\grome\documents\github\programming-ii\string exercises\string exercises\source.cpp(80): error C2039: 'c_str': no es un miembro de 'String'
+  d:\grome\documents\github\programming-ii\string exercises\string exercises\source.cpp(5): note: vea la declaración de 'String'
