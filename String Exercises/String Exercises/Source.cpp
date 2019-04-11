@@ -53,18 +53,18 @@ public:
 		return strlen(array);
 
 	}
+	
+	void clear() {
+
+		delete[] array;
+		size = 0;
+	}
 
 	const char *c_str() const {
 
 		return array;
 	}
 	
-	/*void clear() {
-
-		delete[] array;
-		size = 0;
-	}*/
-
 	/*Copies the passed string into the internals of
 	the object*/
 	void operator=(const String &string) {
@@ -77,13 +77,13 @@ public:
 
 	/*Concatenates the passed string into the
 	internals of the object*/
-	/*void operator+=(const String &string) {
+	void operator+=(const String &string) {
 
 		delete[] array;
 		size = strlen(string.array);
-		strcat(string.array, array);
+		strcat(array, string.array);
 		size++;
-	}*/
+	}
 
 	/*Compares two strings, returns true if they are
 	equal, and false otherwise*/
@@ -156,6 +156,12 @@ int main() {
 
 		std::cout << "Strings are equal, TRY AGAIN NOOB" << std::endl;
 	}
+
+	s2.clear();
+
+	std::cout << "The string2 has " << s2.Size() << " characters." << std::endl;
+
+	s2 += s3;
 
 	system("pause");
 	return 0;

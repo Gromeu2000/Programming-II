@@ -1,4 +1,3 @@
-#pragma once
 
 #define DYNAMIC_ARRAY_CHUNK_SIZE 5
 #define DYNAMIC_ARRAY_INITIAL_CAPACITY 5
@@ -8,8 +7,11 @@ class DynamicArray {
 private:
 	void increseCapacity() {
 
-		mArray = new int[DYNAMIC_ARRAY_CHUNK_SIZE + 1];
-		mCapacity = DYNAMIC_ARRAY_CHUNK_SIZE;
+		mCapacity += DYNAMIC_ARRAY_CHUNK_SIZE;
+		int *mArray2 = new int[mCapacity];
+		mArray2 = mArray;
+		delete[] mArray;
+		mArray = mArray2;
 
 	}
 
@@ -58,9 +60,62 @@ public:
 		}
 	};
 
-	void push_front(int value);
+	void push_front(int value) {
 
-	void insert(unsigned int index, int value);
+		if (mSize < mCapacity) {
+
+			for (int i = mSize; i >= 0; i++) {
+
+				mArray[i] += 1;
+			}
+
+			*mArray = value;
+		}
+
+		if (mSize == mCapacity) {
+
+			mCapacity * 2;
+
+			for (int i = mSize; i >= 0; i++) {
+
+				mArray[i] += 1;
+			}
+
+			*mArray = value;
+		}
+	}
+
+	void insert(unsigned int index, int value) {
+
+		if (mSize < mCapacity) {
+
+			for (int i = 0; i < index; i++) {
+
+				if (mArray[i] == index){
+
+					mArray[i] += 1;
+				}
+				
+			}
+
+			mArray[index] = value;
+		}
+
+		if (mSize == mCapacity) {
+
+			mCapacity * 2;
+
+			for (int i = 0; i < index; i++) {
+
+				if (mArray[i] == index) {
+
+					mArray[i] += 1;
+				}
+			}
+
+			mArray[index] = value;
+		}
+	}
 
 	void erase(unsigned int index);
 
