@@ -1,3 +1,4 @@
+#pragma once
 
 #define DYNAMIC_ARRAY_CHUNK_SIZE 5
 #define DYNAMIC_ARRAY_INITIAL_CAPACITY 5
@@ -9,10 +10,13 @@ private:
 
 		mCapacity += DYNAMIC_ARRAY_CHUNK_SIZE;
 		int *mArray2 = new int[mCapacity];
-		mArray2 = mArray;
+		for (int i = 0; i < mSize - 1; i++) {
+
+			mArray2[i] = mArray[i];
+		}
+
 		delete[] mArray;
 		mArray = mArray2;
-
 	}
 
 	int *mArray = nullptr;
@@ -66,7 +70,7 @@ public:
 
 			for (int i = mSize; i >= 0; i++) {
 
-				mArray[i] += 1;
+				mArray[i] = mArray[ i + 1];
 			}
 
 			*mArray = value;
@@ -74,11 +78,11 @@ public:
 
 		if (mSize == mCapacity) {
 
-			mCapacity * 2;
+			mCapacity += DYNAMIC_ARRAY_CHUNK_SIZE;
 
 			for (int i = mSize; i >= 0; i++) {
 
-				mArray[i] += 1;
+				mArray[i] = mArray[i + 1];
 			}
 
 			*mArray = value;
@@ -89,12 +93,9 @@ public:
 
 		if (mSize < mCapacity) {
 
-			for (int i = 0; i < index; i++) {
+			for (int i = index; i < mSize - 1; i++) {
 
-				if (mArray[i] == index){
-
-					mArray[i] += 1;
-				}
+				mArray[i] = mArray[i + 1];
 				
 			}
 
@@ -103,23 +104,29 @@ public:
 
 		if (mSize == mCapacity) {
 
-			mCapacity * 2;
+			mCapacity += DYNAMIC_ARRAY_CHUNK_SIZE;
 
-			for (int i = 0; i < index; i++) {
+			for (int i = index; i < mSize - 1; i++) {
 
-				if (mArray[i] == index) {
-
-					mArray[i] += 1;
-				}
+				mArray[i] = mArray[i + 1];
 			}
 
 			mArray[index] = value;
 		}
 	}
 
-	void erase(unsigned int index);
+	void erase(unsigned int index) {
 
-	void clear();
+		for (int i = index; i < mSize - 1; i++) {
+
+			mArray[i] = mArray[i+1];
+		}
+	}
+
+	void clear() {
+
+		mSize = 0;
+	}
 
 
 	void shrink_to_fit();

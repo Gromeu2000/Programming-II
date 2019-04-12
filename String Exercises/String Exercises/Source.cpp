@@ -55,14 +55,25 @@ public:
 	}
 	
 	void clear() {
-
+		
 		delete[] array;
+		array = nullptr;
 		size = 0;
+		
 	}
 
 	const char *c_str() const {
 
-		return array;
+		if (size == 0) {
+
+			return " ";
+		}
+
+		else {
+
+			return array;
+		}
+		
 	}
 	
 	/*Copies the passed string into the internals of
@@ -79,10 +90,13 @@ public:
 	internals of the object*/
 	void operator+=(const String &string) {
 
+		size += string.size;
+		char *Narray = new char[size + 1];
+		strcpy(Narray, array);
+		strcat(Narray, string.array);
 		delete[] array;
-		size = strlen(string.array);
-		strcat(array, string.array);
-		size++;
+		array = Narray;
+
 	}
 
 	/*Compares two strings, returns true if they are
@@ -157,11 +171,13 @@ int main() {
 		std::cout << "Strings are equal, TRY AGAIN NOOB" << std::endl;
 	}
 
-	s2.clear();
-
-	std::cout << "The string2 has " << s2.Size() << " characters." << std::endl;
-
 	s2 += s3;
+
+	std::cout << s2.c_str() << std::endl;
+
+	s3.clear();
+
+	std::cout << s3.c_str() << std::endl;
 
 	system("pause");
 	return 0;

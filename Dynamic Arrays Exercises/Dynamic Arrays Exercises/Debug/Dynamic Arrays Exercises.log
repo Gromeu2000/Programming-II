@@ -1,2 +1,6 @@
 ﻿  Source.cpp
-  Dynamic Arrays Exercises.vcxproj -> D:\grome\Documents\GitHub\Programming-II\Dynamic Arrays Exercises\Debug\Dynamic Arrays Exercises.exe
+c:\users\gerardrv\documents\github\programming-ii\dynamic arrays exercises\dynamic arrays exercises\dynamicarray.h(13): warning C4018: '<': signed/unsigned mismatch
+c:\users\gerardrv\documents\github\programming-ii\dynamic arrays exercises\dynamic arrays exercises\dynamicarray.h(96): warning C4018: '<': signed/unsigned mismatch
+c:\users\gerardrv\documents\github\programming-ii\dynamic arrays exercises\dynamic arrays exercises\dynamicarray.h(109): warning C4018: '<': signed/unsigned mismatch
+c:\users\gerardrv\documents\github\programming-ii\dynamic arrays exercises\dynamic arrays exercises\dynamicarray.h(120): warning C4018: '<': signed/unsigned mismatch
+  Dynamic Arrays Exercises.vcxproj -> C:\Users\gerardrv\Documents\GitHub\Programming-II\Dynamic Arrays Exercises\Debug\Dynamic Arrays Exercises.exe
