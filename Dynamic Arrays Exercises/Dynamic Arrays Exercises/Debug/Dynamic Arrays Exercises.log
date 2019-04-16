@@ -1,6 +1,8 @@
 ﻿  Source.cpp
-c:\users\gerardrv\documents\github\programming-ii\dynamic arrays exercises\dynamic arrays exercises\dynamicarray.h(13): warning C4018: '<': signed/unsigned mismatch
-c:\users\gerardrv\documents\github\programming-ii\dynamic arrays exercises\dynamic arrays exercises\dynamicarray.h(96): warning C4018: '<': signed/unsigned mismatch
-c:\users\gerardrv\documents\github\programming-ii\dynamic arrays exercises\dynamic arrays exercises\dynamicarray.h(109): warning C4018: '<': signed/unsigned mismatch
-c:\users\gerardrv\documents\github\programming-ii\dynamic arrays exercises\dynamic arrays exercises\dynamicarray.h(120): warning C4018: '<': signed/unsigned mismatch
-  Dynamic Arrays Exercises.vcxproj -> C:\Users\gerardrv\Documents\GitHub\Programming-II\Dynamic Arrays Exercises\Debug\Dynamic Arrays Exercises.exe
+d:\grome\documents\github\programming-ii\dynamic arrays exercises\dynamic arrays exercises\dynamicarray.h(15): warning C4018: '<': no coinciden signed/unsigned
+d:\grome\documents\github\programming-ii\dynamic arrays exercises\dynamic arrays exercises\dynamicarray.h(56): warning C4018: '<': no coinciden signed/unsigned
+d:\grome\documents\github\programming-ii\dynamic arrays exercises\dynamic arrays exercises\dynamicarray.h(118): warning C4018: '<': no coinciden signed/unsigned
+d:\grome\documents\github\programming-ii\dynamic arrays exercises\dynamic arrays exercises\dynamicarray.h(131): warning C4018: '<': no coinciden signed/unsigned
+d:\grome\documents\github\programming-ii\dynamic arrays exercises\dynamic arrays exercises\dynamicarray.h(144): warning C4018: '<': no coinciden signed/unsigned
+d:\grome\documents\github\programming-ii\dynamic arrays exercises\dynamic arrays exercises\source.cpp(18): warning C4018: '<': no coinciden signed/unsigned
+  Dynamic Arrays Exercises.vcxproj -> D:\grome\Documents\GitHub\Programming-II\Dynamic Arrays Exercises\Debug\Dynamic Arrays Exercises.exe

@@ -1,5 +1,7 @@
 #pragma once
 
+#include <assert.h>
+
 #define DYNAMIC_ARRAY_CHUNK_SIZE 5
 #define DYNAMIC_ARRAY_INITIAL_CAPACITY 5
 
@@ -36,31 +38,49 @@ public:
 		delete[] mArray;
 	};
 
-	bool empty()const;
+	bool empty()const {
 
-	unsigned int size() const;
+		if (mSize == 0) {
 
+			return true;
+		}
 
-	int &operator[](unsigned int index);
+		else
+			return false;
+	}
 
-	const int &operator[](unsigned int index) const;
+	unsigned int size() const {
 
+		unsigned int count = 0;
+
+		for (int i = 0; i < mSize - 1; i++) {
+
+			if (mArray[i] != '\0') {
+
+				count++;
+			}
+		}
+		return count;
+	}
+
+	int &operator[ ](unsigned int index) { return mArray[index]; }
+	const int &operator[ ](unsigned int index) const { return mArray[index]; }
 
 	void push_back(int value) {
 	
 		if (mSize < mCapacity) {
 
-			value = mArray[DYNAMIC_ARRAY_CHUNK_SIZE];
+			value = mArray[mSize + 1];
 			mSize++;
 		}
 
 		if (mSize == mCapacity) {
 
-			mArray = new int[DYNAMIC_ARRAY_CHUNK_SIZE + 1];
 			mCapacity += DYNAMIC_ARRAY_CHUNK_SIZE;
+			mArray = new int[mCapacity + 1];
 
-			value = mArray[DYNAMIC_ARRAY_CHUNK_SIZE];
-			mSize;
+			value = mArray[mSize + 1];
+			mSize++;
 		}
 	};
 
@@ -91,6 +111,8 @@ public:
 
 	void insert(unsigned int index, int value) {
 
+		assert(index <= mSize && "Index out of bounds");
+
 		if (mSize < mCapacity) {
 
 			for (int i = index; i < mSize - 1; i++) {
@@ -117,9 +139,11 @@ public:
 
 	void erase(unsigned int index) {
 
+		assert(index < mSize && "Index out of bounds");
+
 		for (int i = index; i < mSize - 1; i++) {
 
-			mArray[i] = mArray[i+1];
+			mArray[i] = mArray[i-1];
 		}
 	}
 
@@ -127,7 +151,4 @@ public:
 
 		mSize = 0;
 	}
-
-
-	void shrink_to_fit();
 };
