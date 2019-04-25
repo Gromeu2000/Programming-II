@@ -18,13 +18,13 @@ public:
 
 		if (_back != -1) {
 
-			_array = &_back;
+			value = _back + 1;
 			_back++;
 		}
 	}
+
 	int dequeue() {
 
-		_array = 0;
 		for (int i = 0; i < _back; i++) {
 
 			_array[i] = _array[i + 1];
