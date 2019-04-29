@@ -1,12 +1,11 @@
 #pragma once
+
+#define MAX_CHUNK_SIZE 10
+
 class Stack
 {
 public:
 	// Ctor. and Dtor.
-	Stack() {
-
-		_array = new int[_top];
-	}
 	~Stack() {
 
 		delete[] _array;
@@ -14,7 +13,16 @@ public:
 	// Modifiers
 	void push(int value) {
 
-		value = _top;
+		if (_top > capacity) {
+
+			increaseCapacity();
+		}
+		else {
+
+			_top = (_top + 1);
+		}
+
+		_array[_top] = value;
 		_top++;
 	}
 	void pop() {
@@ -43,6 +51,21 @@ public:
 	}
 
 private:
-	int _top; // Current top index (-1 if empty)
-	int *_array; // Dynamically allocated array
+
+	void increaseCapacity() {
+
+		capacity += MAX_CHUNK_SIZE;
+		int *New_array = new int[capacity];
+		for (int i = 0; i < _top; i++) {
+
+			New_array[i] = _array[i];
+		}
+		delete[] _array;
+		_array = New_array;
+	}
+
+	int _top = -1; // Current top index (-1 if empty)
+	int *_array = new int[MAX_CHUNK_SIZE]; // Dynamically allocated array
+	int capacity = MAX_CHUNK_SIZE;
+	int num_elements = 0;
 };
