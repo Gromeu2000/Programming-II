@@ -30,6 +30,7 @@ public:
 		if (_top > -1) {
 
 			_top--;
+			capacity--;
 		}
 	}
 	// Getters
@@ -47,6 +48,14 @@ public:
 		else {
 
 			return false;
+		}
+	}
+
+	void print() {
+
+		for (int i = 0; i < _top; i++) {
+
+			std::cout << _array[i] << std::endl;
 		}
 	}
 
