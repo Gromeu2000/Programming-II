@@ -1,5 +1,7 @@
 #pragma once
 
+#include <assert.h>
+
 #define MAX_CHUNK_SIZE 10
 
 class Stack
@@ -13,25 +15,20 @@ public:
 	// Modifiers
 	void push(int value) {
 
-		if (_top > capacity) {
+		if (_top >= capacity) {
 
 			increaseCapacity();
 		}
-		else {
 
-			_top = (_top + 1);
-		}
-
+		_top = (_top + 1);
 		_array[_top] = value;
-		_top++;
 	}
 	void pop() {
 
-		if (_top > -1) {
+		assert(_top != -1 && "Stack is empty");
 
-			_top--;
-			capacity--;
-		}
+		_top--;
+
 	}
 	// Getters
 	int top() const {
@@ -53,7 +50,7 @@ public:
 
 	void print() {
 
-		for (int i = 0; i < _top; i++) {
+		for (int i = 0; i < _top+1; i++) {
 
 			std::cout << _array[i] << std::endl;
 		}
@@ -65,7 +62,7 @@ private:
 
 		capacity += MAX_CHUNK_SIZE;
 		int *New_array = new int[capacity];
-		for (int i = 0; i < _top; i++) {
+		for (int i = 0; i < _top+1; i++) {
 
 			New_array[i] = _array[i];
 		}

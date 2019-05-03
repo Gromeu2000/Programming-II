@@ -1,0 +1,12 @@
+﻿  Main.cpp
+c:\users\gerardrv\documents\github\programming-ii\linked lists exercise\linked lists exercise\main.cpp(24): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+c:\users\gerardrv\documents\github\programming-ii\linked lists exercise\linked lists exercise\main.cpp(25): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Linked Lists Exercise.vcxproj -> C:\Users\gerardrv\Documents\GitHub\Programming-II\Linked Lists Exercise\Debug\Linked Lists Exercise.exe
