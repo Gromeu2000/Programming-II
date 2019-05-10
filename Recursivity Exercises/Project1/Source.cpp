@@ -48,11 +48,33 @@ void recursiveFunc( int i ) {
 	
 }
 
+int numTrues(bool vec[], int sizeVec, unsigned int index) {
+
+	int count = 0;
+
+	if (index < sizeVec) {
+
+		if (vec[index] == true) {
+
+			count++;
+			numTrues(vec, sizeVec, index + 1);
+		}
+		
+	}
+	else if(index == sizeVec){
+
+		return count;
+	}
+	
+}
+
 int main() {
 
 	recursiveFunc(0);
 	std::cout << recursiveFunc2(4) << std::endl;
 	std::cout << recursiveFunc3(9) << std::endl;
+	bool array[4] = { true, false, true, true };
+	std::cout << numTrues(array, 4, 0) << std::endl;
 	system("pause");
 	return 0;
 }
