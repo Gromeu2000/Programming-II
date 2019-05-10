@@ -34,7 +34,6 @@ void main()
 
 	int level = 0;
 	concentric_circles(level, 500, 500, 400);
-	
 
 	system("pause");
 }
