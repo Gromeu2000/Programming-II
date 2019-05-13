@@ -1,6 +1,5 @@
 ﻿  Source.cpp
-c:\users\gerardrv\documents\github\programming-ii\recursivity exercises\project1\source.cpp(53): warning C4018: '<': signed/unsigned mismatch
-c:\users\gerardrv\documents\github\programming-ii\recursivity exercises\project1\source.cpp(75): warning C4018: '<': signed/unsigned mismatch
-c:\users\gerardrv\documents\github\programming-ii\recursivity exercises\project1\source.cpp(15): warning C4715: 'recursiveFunc2': not all control paths return a value
-c:\users\gerardrv\documents\github\programming-ii\recursivity exercises\project1\source.cpp(91): warning C4715: 'searchRec': not all control paths return a value
-  Project1.vcxproj -> C:\Users\gerardrv\Documents\GitHub\Programming-II\Recursivity Exercises\Debug\Project1.exe
+d:\grome\documents\github\programming-ii\recursivity exercises\project1\source.cpp(53): warning C4018: '<': no coinciden signed/unsigned
+d:\grome\documents\github\programming-ii\recursivity exercises\project1\source.cpp(75): warning C4018: '<': no coinciden signed/unsigned
+d:\grome\documents\github\programming-ii\recursivity exercises\project1\source.cpp(15): warning C4715: 'recursiveFunc2': no todas las rutas de acceso de control devuelven un valor
+  Project1.vcxproj -> D:\grome\Documents\GitHub\Programming-II\Recursivity Exercises\Debug\Project1.exe
