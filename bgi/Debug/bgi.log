@@ -1,10 +1,6 @@
 ﻿  main.cxx
+c:\users\gerardrv\documents\github\programming-ii\bgi\main.cxx(10): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\gerardrv\documents\github\programming-ii\bgi\main.cxx(11): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 c:\users\gerardrv\documents\github\programming-ii\bgi\main.cxx(12): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
 c:\users\gerardrv\documents\github\programming-ii\bgi\main.cxx(13): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\gerardrv\documents\github\programming-ii\bgi\main.cxx(14): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\gerardrv\documents\github\programming-ii\bgi\main.cxx(15): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\gerardrv\documents\github\programming-ii\bgi\main.cxx(16): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\gerardrv\documents\github\programming-ii\bgi\main.cxx(17): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\gerardrv\documents\github\programming-ii\bgi\main.cxx(18): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\gerardrv\documents\github\programming-ii\bgi\main.cxx(19): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   bgi.vcxproj -> C:\Users\gerardrv\Documents\GitHub\Programming-II\bgi\Debug\bgi.exe

@@ -50,31 +50,54 @@ void recursiveFunc( int i ) {
 
 int numTrues(bool vec[], int sizeVec, unsigned int index) {
 
-	int count = 0;
-
 	if (index < sizeVec) {
-
+		
+		int count = 0;
+		
+		numTrues(vec, sizeVec, index + 1);
+		
 		if (vec[index] == true) {
 
 			count++;
-			numTrues(vec, sizeVec, index + 1);
 		}
 		
+		return count + numTrues(vec, sizeVec, index + 1);
 	}
-	else if(index == sizeVec){
+	else {
 
-		return count;
+		return 0;
 	}
 	
 }
 
+bool searchRec(int vec[], int sizeVec, unsigned int index, int val) {
+
+	if (index < sizeVec) {
+
+		searchRec(vec, sizeVec, index + 1, val);
+		if (vec[index] == val) {
+
+			std::cout << "The val is in the array" << std::endl;
+			return true;
+		}
+		else {
+
+			std::cout << "The val is not in the array" << std::endl;
+		}
+	}
+	else {
+		return false;
+	}
+}
 int main() {
 
 	recursiveFunc(0);
 	std::cout << recursiveFunc2(4) << std::endl;
 	std::cout << recursiveFunc3(9) << std::endl;
-	bool array[4] = { true, false, true, true };
-	std::cout << numTrues(array, 4, 0) << std::endl;
+	bool vec[] = { true, false, true, true, true, false };
+	int vec1[] = { 1, 2, 3, 4, 5, 6, 7 };
+	std::cout << numTrues(vec, 6, 0) << std::endl;
+	std::cout << searchRec(vec1, 7, 0, 4) << std::endl;
 	system("pause");
 	return 0;
 }
