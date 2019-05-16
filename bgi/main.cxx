@@ -20,16 +20,27 @@ struct point2d {
 	float y;
 };
 
-void triangle(const point2d &a, const point2d &b, const point2d &c) {
+void sierpinski_triangle(point2d* a, point2d* b, point2d* c, int level) {
 
-	std::cout << "hello" << std::endl;
-}
-
-void sierpinski_triangle(int a, int b, int c, int level) {
+	point2d tempA, tempB, tempC;
 
 	if (level < 6) {
 
-		triangle(a, b, c);
+		tempA.x = a->x; tempA.y = a->y;
+		tempB.x = (a->x + b->x) / 2; tempB.y = (a->y + b->y) / 2;
+		tempC.x = (a->x + c->x) / 2; tempC.y = (a->y + c->y) / 2;
+		sierpinski_triangle(&tempA, &tempB, &tempC, level + 1);
+
+		tempA.x = (a->x + b->x) / 2; tempA.y = (a->y + b->y) / 2;
+		tempB.x = b->x; tempB.y = b->y;
+		tempC.x = (c->x + b->x) / 2; tempC.y = (c->y + b->y) / 2;
+		sierpinski_triangle(&tempA, &tempB, &tempC, level + 1);
+
+		tempA.x = (a->x + c->x) / 2; tempA.y = (a->y + c->y) / 2;
+		tempB.x = (c->x + b->x) / 2; tempB.y = (c->y + b->y) / 2;
+		tempC.x = c->x; tempC.y = c->y;
+		sierpinski_triangle(&tempA, &tempB, &tempC, level + 1);
+
 	}
 }
 
@@ -46,8 +57,12 @@ void main()
 	initwindow(1000, 1000, "Graphics");
 	initwindow(1000, 1000, "Graphics");
 
+	point2d* a;
+	point2d* b;
+	point2d* c;
 	int level = 0;
-	concentric_circles(level, 500, 500, 400);
+	/*concentric_circles(level, 500, 500, 400);*/
+	sierpinski_triangle(a, b, c, level);
 
 	system("pause");
 }
