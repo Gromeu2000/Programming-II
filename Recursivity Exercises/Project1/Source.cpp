@@ -125,7 +125,7 @@ int main() {
 		std::cout << "The number is not in the array"<< std::endl;
 	}
 
-	std::cout << sumElemsRec(vec2, 6, 0) << std::endl;
+	std::cout << sumElemsRec(vec2, 6, 0) << std::endl;9
 	system("pause");
 	return 0;
 }

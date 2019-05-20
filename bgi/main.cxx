@@ -61,8 +61,8 @@ void main()
 	point2d* b;
 	point2d* c;
 	int level = 0;
-	/*concentric_circles(level, 500, 500, 400);*/
-	sierpinski_triangle(a, b, c, level);
+	concentric_circles(level, 500, 500, 400);
+	//sierpinski_triangle(a, b, c, level);
 
 	system("pause");
 }

@@ -1,35 +1,6 @@
-﻿  bgiout.cxx
-  dibutil.cxx
-  drawing.cxx
-c:\users\gerardrv\documents\github\programming-ii\bgi\drawing.cxx(819): warning C4101: 'tries': unreferenced local variable
-c:\users\gerardrv\documents\github\programming-ii\bgi\drawing.cxx(859): warning C4101: 'answer': unreferenced local variable
-c:\users\gerardrv\documents\github\programming-ii\bgi\drawing.cxx(1110): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\string.h(90): note: see declaration of 'strcat'
-  file.cxx
-  main.cxx
-c:\users\gerardrv\documents\github\programming-ii\bgi\main.cxx(10): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\gerardrv\documents\github\programming-ii\bgi\main.cxx(11): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\gerardrv\documents\github\programming-ii\bgi\main.cxx(12): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\gerardrv\documents\github\programming-ii\bgi\main.cxx(13): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  misc.cxx
-c:\users\gerardrv\documents\github\programming-ii\bgi\misc.cxx(595): warning C4838: conversion from 'int' to 'unsigned short' requires a narrowing conversion
-c:\users\gerardrv\documents\github\programming-ii\bgi\misc.cxx(596): warning C4838: conversion from 'int' to 'unsigned short' requires a narrowing conversion
-c:\users\gerardrv\documents\github\programming-ii\bgi\misc.cxx(597): warning C4838: conversion from 'int' to 'unsigned short' requires a narrowing conversion
-c:\users\gerardrv\documents\github\programming-ii\bgi\misc.cxx(598): warning C4838: conversion from 'int' to 'unsigned short' requires a narrowing conversion
-c:\users\gerardrv\documents\github\programming-ii\bgi\misc.cxx(599): warning C4838: conversion from 'int' to 'unsigned short' requires a narrowing conversion
-  mouse.cxx
-  palette.cxx
-  text.cxx
-c:\users\gerardrv\documents\github\programming-ii\bgi\text.cxx(348): warning C4018: '<': signed/unsigned mismatch
-  winbgi.cxx
-c:\users\gerardrv\documents\github\programming-ii\bgi\winbgi.cxx(134): warning C4101: 'actual_color': unreferenced local variable
-c:\users\gerardrv\documents\github\programming-ii\bgi\winbgi.cxx(133): warning C4101: 'bgi_color': unreferenced local variable
-c:\users\gerardrv\documents\github\programming-ii\bgi\winbgi.cxx(494): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
-  winthread.cxx
-c:\users\gerardrv\documents\github\programming-ii\bgi\winthread.cxx(320): warning C4101: 'i': unreferenced local variable
-  Generating Code...
-c:\users\gerardrv\documents\github\programming-ii\bgi\main.cxx(65): warning C4700: uninitialized local variable 'c' used
-c:\users\gerardrv\documents\github\programming-ii\bgi\main.cxx(65): warning C4700: uninitialized local variable 'b' used
-c:\users\gerardrv\documents\github\programming-ii\bgi\main.cxx(65): warning C4700: uninitialized local variable 'a' used
-  bgi.vcxproj -> C:\Users\gerardrv\Documents\GitHub\Programming-II\bgi\Debug\bgi.exe
+﻿  main.cxx
+d:\grome\documents\github\programming-ii\bgi\main.cxx(10): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+d:\grome\documents\github\programming-ii\bgi\main.cxx(60): warning C4101: 'a': variable local sin referencia
+d:\grome\documents\github\programming-ii\bgi\main.cxx(61): warning C4101: 'b': variable local sin referencia
+d:\grome\documents\github\programming-ii\bgi\main.cxx(62): warning C4101: 'c': variable local sin referencia
+  bgi.vcxproj -> D:\grome\Documents\GitHub\Programming-II\bgi\Debug\bgi.exe
