@@ -1,0 +1,6 @@
+﻿  main.cpp
+c:\users\grome\downloads\sortingalgorithms\main.cpp(85): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\grome\downloads\sortingalgorithms\main.cpp(86): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\grome\downloads\sortingalgorithms\main.cpp(243): warning C4244: 'inicializando': conversión de 'LONGLONG' a 'double'; posible pérdida de datos
+c:\users\grome\downloads\sortingalgorithms\main.cpp(244): warning C4244: 'inicializando': conversión de 'LONGLONG' a 'double'; posible pérdida de datos
+  SortingAlgorithms.vcxproj -> C:\Users\grome\Downloads\SortingAlgorithms\Debug\SortingAlgorithms.exe
