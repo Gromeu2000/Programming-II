@@ -1,6 +1,17 @@
 #include "graphics.h"
 #include <iostream>
 
+void cantor(int depth, float x1, float x2, float y)
+{
+	if (depth < 7)
+	{
+		line(x1, y, x2, y);
+		int width = (x2 - x1) / 3;
+		cantor(depth + 1, x1, x1 + width, y + 100);
+		cantor(depth + 1, x1 + 2 * width, x2, y + 100);
+	}
+}
+
 void concentric_circles(int level, int x, int y, int radius) {
 
 	if (level < 5) {
@@ -14,33 +25,46 @@ void concentric_circles(int level, int x, int y, int radius) {
 	}
 }
 
-struct point2d {
+struct vec2 {
 
 	float x;
 	float y;
+	vec2() : x(0), y(0) {}
+	vec2(float X, float Y) :x(X), y(Y) {}
+	
 };
 
-void sierpinski_triangle(point2d* a, point2d* b, point2d* c, int level) {
+vec2 operator+(const vec2 &a, const vec2 &b) { return vec2(a.x + b.x, a.y + b.y); }
+vec2 operator-(const vec2 &a, const vec2 &b) { return vec2(a.x - b.x, a.y - b.y); }
+vec2 operator-(const vec2 &b) { return vec2(-b.x, -b.y); }
+vec2 operator*(float v, const vec2 &a) { return vec2(a.x * v, a.y * v); }
+vec2 operator*(const vec2 &a, float v) { return vec2(a.x * v, a.y * v); }
+vec2 operator/(const vec2 &a, float v) { return vec2(a.x / v, a.y / v); }
+float dot(const vec2 &a, const vec2 &b) { return a.x * b.x + a.y * b.y; }
+float length(const vec2 &v) { return sqrt(dot(v, v)); }
+vec2 perpendicular(const vec2 &v) { return vec2(v.y, -v.x); }
+vec2 normalize(const vec2 &v) { return v / length(v); }
 
-	point2d tempA, tempB, tempC;
 
-	if (level < 6) {
 
-		tempA.x = a->x; tempA.y = a->y;
-		tempB.x = (a->x + b->x) / 2; tempB.y = (a->y + b->y) / 2;
-		tempC.x = (a->x + c->x) / 2; tempC.y = (a->y + c->y) / 2;
-		sierpinski_triangle(&tempA, &tempB, &tempC, level + 1);
+void triangle(const vec2 &a, const vec2 &b, const vec2 &c)
+{
+	line(a.x, a.y, b.x, b.y);
+	line(b.x, b.y, c.x, c.y);
+	line(c.x, c.y, a.x, a.y);
+}
 
-		tempA.x = (a->x + b->x) / 2; tempA.y = (a->y + b->y) / 2;
-		tempB.x = b->x; tempB.y = b->y;
-		tempC.x = (c->x + b->x) / 2; tempC.y = (c->y + b->y) / 2;
-		sierpinski_triangle(&tempA, &tempB, &tempC, level + 1);
-
-		tempA.x = (a->x + c->x) / 2; tempA.y = (a->y + c->y) / 2;
-		tempB.x = (c->x + b->x) / 2; tempB.y = (c->y + b->y) / 2;
-		tempC.x = c->x; tempC.y = c->y;
-		sierpinski_triangle(&tempA, &tempB, &tempC, level + 1);
-
+void sierpinski(int depth, const vec2 &bottomLeft, const vec2 &bottomRight, const vec2 &top)
+{
+	if (depth < 7)
+	{
+		const vec2 a(0.5*(bottomLeft + top));
+		const vec2 b(0.5*(top + bottomRight));
+		const vec2 c(0.5*(bottomLeft + bottomRight));
+		triangle(a, b, c);
+		sierpinski(depth + 1, bottomLeft, c, a);
+		/*sierpinski(depth + 1, c, bottomRight, b);
+		sierpinski(depth + 1, a, b, top);*/
 	}
 }
 
@@ -55,14 +79,12 @@ void main()
 	
 
 	initwindow(1000, 1000, "Graphics");
-	initwindow(1000, 1000, "Graphics");
-
-	point2d* a;
-	point2d* b;
-	point2d* c;
-	int level = 0;
-	concentric_circles(level, 500, 500, 400);
-	//sierpinski_triangle(a, b, c, level);
-
+	//cantor(0, 10, 900, 100);
+	//concentric_circles(0, 500, 500, 400);
+	const vec2 bottomLeft(100, 1000 - 100);
+	const vec2 bottomRight(900, 1000 - 100);
+	const vec2 top(500, 1000 - 770);
+	triangle(bottomLeft, bottomRight, top);
+	sierpinski(0, bottomLeft, bottomRight, top);
 	system("pause");
 }
