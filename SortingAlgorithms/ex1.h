@@ -18,16 +18,23 @@ void bubblesort(uint32 * array, int size)
 {
 
 	// TODO: Insert your code here
-	for (int i = 0; i < size; i++) {
+	int num = -1;
 
-		for (int j = 0; j < size; j++) {
+	while (num != 0) {
 
-			if (array[j] >= array[j + 1]) {
+		num = 0;
 
-				int var = array[j];
-				array[j] = array[j + 1];
-				array[j + 1] = var;
+		for (int i = 0; i < size; i++) {
+
+			if (array[i] > array[i + 1]) {
+
+				int var = array[i];
+				array[i] = array[i + 1];
+				array[i + 1] = var;
+				num++;
 			}
+
+			
 		}
 	}
 
